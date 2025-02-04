@@ -7,6 +7,7 @@ use App\ControllerInterface;
 use Model\Managers\CategorieManager;
 use Model\Managers\TopicManager;
 use Model\Managers\PostManager;
+use Model\Managers\UtilisateurManager;
 
 class ForumController extends AbstractController implements ControllerInterface{
 
@@ -68,6 +69,48 @@ class ForumController extends AbstractController implements ControllerInterface{
         }
 
 
+
+    // public function listUtilisateurForm(){
+
+    //     return [
+    //         "view" => VIEW_DIR."forum/form/listUtilisateurForm.php",
+    //         "meta_description" => "Liste des utilisateurs du forum",
+         
+    //     ];
+
+        
+
+
+
+    // }
+
+
+     public function listUtilisateurs() {
+
+        $utilisateurManager = new utilisateurManager();
+        $utilisateurs = $utilisateurManager->findAll();
+
+        return [
+            "view" => VIEW_DIR."forum/listUtilisateurs.php",
+            "meta_description" => "Liste des utilisateurs :",
+            "data" => [
+                
+                "utilisateurs" => $utilisateurs,
+            ]
+        ];
+
+
+
+
+
+
+
+            
+
+
+
+
+     }
 
     public function addCategorieForm(){
 

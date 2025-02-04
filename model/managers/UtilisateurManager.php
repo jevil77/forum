@@ -13,4 +13,52 @@ class UtilisateurManager extends Manager{
     public function __construct(){
         parent::connect();
     }
+
+    // public function findUtilisateur($nom){
+
+    //     $sql = "SELECT *
+    //     FROM ".$this->tableName." a
+    //     WHERE a.nom = :nom
+    //     ";
+
+    //     return $this->getOneOrNullResult(
+    //     DAO::select($sql, ['nom' => $nom], false), 
+    //     $this->className
+    //     );
+
+
+
+    // }
+
+
+
+    public function findOneByEmail($email)
+    {
+        $sql = "SELECT * 
+                FROM " . $this->tableName . " u 
+                WHERE u.mail = :email";
+
+        return $this->getOneOrNullResult(
+            DAO::select($sql, ['email' => $email], false),
+            $this->className
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+

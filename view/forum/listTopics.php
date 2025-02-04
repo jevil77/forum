@@ -21,7 +21,6 @@ if (empty($topics)) { ?>
 
 
 
-
 <div class="form">
 <form action="index.php?ctrl=forum&action=addTopicToCategorie&id=1" method="POST">
 

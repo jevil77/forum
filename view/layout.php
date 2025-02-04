@@ -40,11 +40,15 @@
                                 <a href="index.php?ctrl=security&action=login">Connexion</a>
                                 <a href="index.php?ctrl=security&action=registerForm">Inscription</a>
                                 <a href="index.php?ctrl=forum&action=index">Liste des catégories</a>
+                               
                             <?php
                             }
                         ?>
                         </div>
+                        <a href="index.php?ctrl=forum&action=listUtilisateurs">Liste des utilisateurs</a>
                     </nav>
+                    
+
                 </header>
                 
                 <main id="forum">
