@@ -12,6 +12,16 @@
     </head>
     <body>
         <div id="wrapper"> 
+
+        
+
+<?php
+
+var_dump($_SESSION['user']);
+
+?>
+
+
             <div id="mainpage">
                 <!-- c'est ici que les messages (erreur ou succès) s'affichent-->
                 <h3 class="message" style="color: red"><?= App\Session::getFlash("error") ?></h3>
@@ -37,7 +47,7 @@
                             }
                             else{
                                 ?>
-                                <a href="index.php?ctrl=security&action=login">Connexion</a>
+                                <a href="index.php?ctrl=security&action=loginForm">Connexion</a>
                                 <a href="index.php?ctrl=security&action=registerForm">Inscription</a>
                                 <a href="index.php?ctrl=forum&action=index">Liste des catégories</a>
                                
